@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GroupCollab | Group Space</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button id="back-btn">⬅ Back to Dashboard</button>
+  <h2 id="group-name"></h2>
+  <button id="leave-btn" class="danger">Leave Group</button>
+
+  <div id="pet-container">
+    <img id="pet" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cute_Baby_Chick.png" alt="Pet">
+    <p id="pet-stage">Stage: Egg</p>
+  </div>
+
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+
+  <button id="study-btn">Complete Study Session</button>
+
+  <div id="leaderboard">
+    <h3>🏫 Class Leaderboard</h3>
+    <div id="leaderboard-items"></div>
+  </div>
+
+  <!-- 🧩 Task List Section -->
+  <div id="tasks-section">
+    <h3>📋 Task List</h3>
+    <div id="task-list"></div>
+    <button id="add-task-btn">➕ Add Task</button>
+
+    <!-- Hidden task form -->
+    <div id="task-form" style="display:none; margin-top: 10px;">
+      <input type="text" id="task-name" placeholder="Task Name" />
+      <input type="date" id="task-due" />
+      <input type="number" id="task-points" placeholder="Points" min="1" />
+      <button id="save-task-btn">Save Task</button>
+      <button id="cancel-task-btn" class="danger">Cancel</button>
+    </div>
+  </div>
+
+  <script src="group.js"></script>
+</body>
+</html>

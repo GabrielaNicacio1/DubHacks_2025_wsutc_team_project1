@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudyRank | Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Welcome to StudyRank</h1>
+
+  <div class="container">
+    <!-- Create Profile (first time user) -->
+    <div id="create-profile-section" class="card">
+      <h2>👤 Create Your Profile</h2>
+      <p class="subtext">Set up your username to get started!</p>
+      <input type="text" id="newUsernameInput" placeholder="Enter a username">
+      <button id="createProfileBtn">Create Profile</button>
+    </div>
+
+    <!-- Existing User Profile -->
+    <div id="profile-section" class="card" style="display: none;">
+      <h2>👋 Welcome, <span id="profile-username"></span>!</h2>
+      <p class="subtext">You can create or join groups, or view your dashboard.</p>
+      <button id="toDashboardBtn" class="primary-btn">📊 Go to Dashboard</button>
+      <button id="logoutBtn" class="danger-btn">🚪 Log Out</button>
+    </div>
+
+    <!-- Create Group -->
+    <div id="create-group-section" class="card" style="display: none;">
+      <h2>🧩 Create a New Group</h2>
+      <input type="text" id="groupNameInput" placeholder="Enter group name">
+      <button id="createGroupBtn">Create Group</button>
+    </div>
+
+    <!-- Join Group -->
+    <div id="join-group-section" class="card" style="display: none;">
+      <h2>🔑 Join an Existing Group</h2>
+      <input type="text" id="groupCodeInput" placeholder="Enter group code">
+      <button id="joinGroupBtn">Join Group</button>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

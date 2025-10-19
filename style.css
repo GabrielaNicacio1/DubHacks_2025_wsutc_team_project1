@@ -1,0 +1,223 @@
+/* === Global Layout === */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #a8edea, #fed6e3);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #333;
+}
+
+/* === Title === */
+h1 {
+  color: #333;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+}
+
+/* === White Main Container === */
+.container {
+  max-width: 500px;
+  margin: 20px auto 60px auto; /* moves the white box up under the title */
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* === Card Sections (Create, Join, Profile, etc.) === */
+.card {
+  background: #f9f9ff;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* === Input Fields === */
+input {
+  width: 85%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: 0.2s ease;
+}
+
+input:focus {
+  border-color: #6a82fb;
+  outline: none;
+}
+
+/* === Buttons === */
+button {
+  background: linear-gradient(90deg, #6a82fb, #76c7c0);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: all 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #5b73f2, #64b8b0);
+}
+
+/* Disabled state */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* === Danger (Logout / Delete) Buttons === */
+button.danger,
+button.danger-btn,
+#logoutBtn {
+  background: #ff6b6b;
+}
+
+button.danger:hover,
+button.danger-btn:hover,
+#logoutBtn:hover {
+  background: #e35757;
+}
+
+/* === Dashboard Group Cards === */
+.group-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 60%;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.group-card h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.member-list {
+  margin: 5px 0 10px 20px;
+  padding: 0;
+  list-style-type: circle;
+  color: #444;
+}
+
+/* === Profile Groups List (inside profile page) === */
+.profile-group {
+  background: #f5f5ff;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.profile-group button {
+  margin-left: 10px;
+  background: #6a82fb;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.profile-group button:hover {
+  background: #5041f5;
+}
+
+/* === Create Profile Section === */
+#create-profile-section {
+  margin-top: 20px;
+}
+
+#create-profile-section input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* === Progress Bar & Pet Section (Group Page) === */
+#pet-container {
+  margin-top: 40px;
+}
+
+#pet {
+  width: 150px;
+  height: 150px;
+  transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+#pet:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+#progress-container {
+  width: 60%;
+  margin: 20px auto;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#progress-bar {
+  height: 20px;
+  width: 0%;
+  background: linear-gradient(to right, #76c7c0, #6a82fb);
+   transition: width 0.4s ease-in-out, background 0.5s ease;
+}
+
+/* === Leaderboard Section === */
+#leaderboard {
+  margin: 40px auto;
+  width: 60%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.leaderboard-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* === Remove default hr lines (cleaner layout) === */
+hr {
+  display: none;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    margin: 10px auto 40px auto;
+    padding: 20px;
+  }
+
+  .group-card,
+  #leaderboard {
+    width: 90%;
+  }
+}
+
+
